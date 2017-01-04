@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--默认图片-->
+    <item android:state_expanded="false"
+        android:drawable="@drawable/bg_beak_tooltip_white_44" />
+    <!--点击时图片-->
+    <item android:state_expanded="true"
+        android:drawable="@drawable/bg_beak_tooltip_white_down_44"/>
+</selector>

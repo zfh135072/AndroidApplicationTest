@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Android 工具</string>
+    <string name="home_page">主页</string>
+    <string name="user_name">上课就犯困星人</string>
+    <string name="user_email">zfh7390885@gmail.com</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="system_stress_test">系统单项设置</string>
+    <string name="bluetooth">蓝牙</string>
+    <string name="wifi">无线wifi</string>
+    <string name="outline_mode">飞行模式</string>
+    <string name="app_manager">应用管理</string>
+    <string name="file_manager">文件管理</string>
+    <string name="battery_info">电池运行状况</string>
+    <string name="system_shutdown">系统关机重启</string>
+    <string name="system_info">系统信息</string>
+    <string name="about">关于</string>
+
+    <string name="battery_home">电池记录</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

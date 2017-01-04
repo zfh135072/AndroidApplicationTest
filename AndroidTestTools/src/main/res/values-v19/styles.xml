@@ -1,0 +1,7 @@
+<resources>
+    <!--Android 4.4以上系统采用的主题-->
+    <style name="Theme.Translucent.Navigation" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+</resources>
