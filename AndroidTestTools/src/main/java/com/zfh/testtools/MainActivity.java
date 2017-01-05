@@ -65,12 +65,16 @@ public class MainActivity extends AppCompatActivity {
         menuAdapter = new MenuAdapter(MainActivity.this);//此处之前出错，因为没有初始化类中的Context对象
         //侧栏绑定适配器
         left_listview.setAdapter(menuAdapter);
+        //初始化时替换帧布局
+        transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.tv_content, new HomeFragment()).commit();
     }
     //ExpandableListView监听组列表下的子列表项
     class ExpandGroupLinstener implements ExpandableListView.OnGroupClickListener{
         //监听组列表
         @Override
         public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+            //每次点击都注册一个新事务
             transaction = getSupportFragmentManager().beginTransaction();
             switch (groupPosition) {
                 case 0: //主页
@@ -97,7 +101,9 @@ public class MainActivity extends AppCompatActivity {
             }
 //            transaction.addToBackStack(null);//将事务添加进返回栈
             transaction.commit();
-            drawer_layout.closeDrawer(Gravity.LEFT);    //关闭左侧栏
+            if (menuAdapter.getChildrenCount(groupPosition) < 1) {
+                drawer_layout.closeDrawer(Gravity.LEFT);    //关闭左侧栏
+            }
             return false;//传入下级判断是否展开，所以返回false
         }
     }
